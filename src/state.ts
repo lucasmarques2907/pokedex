@@ -15,7 +15,7 @@ export type State = {
   pokeAPI: PokeAPI;
   nextLocationsURL: string;
   prevLocationsURL: string;
-  pokedex: Record<string, Pokemon>;
+  caughtPokemon: Record<string, Pokemon>;
 };
 
 export function initState(cacheInterval: number): State {
@@ -32,6 +32,6 @@ export function initState(cacheInterval: number): State {
     pokeAPI: new PokeAPI(cacheInterval),
     nextLocationsURL: "",
     prevLocationsURL: "",
-    pokedex: {},
+    caughtPokemon: {},
   };
 }
